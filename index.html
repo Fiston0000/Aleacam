@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aleacam</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="main-container">
+
+    <!-- Bloc vidéos à gauche -->
+    <div id="videos-container">
+      <div class="video-wrapper">
+        <div class="video-description" id="remote-description">Pas de description</div>
+        <div class="video-container" id="remote-video-container"></div>
+      </div>
+      <div class="video-wrapper">
+        <div class="video-description" id="local-description">Pas de description</div>
+        <div class="video-container" id="local-video-container"></div>
+      </div>
+    </div>
+
+    <!-- Colonne de boutons -->
+    <div id="buttons-container">
+      <button class="video-btn" id="skip-btn">Skip</button>
+      <button class="video-btn" id="stop-btn">Stop</button>
+      <button class="video-btn" id="play-btn">Play</button>
+      <select class="video-btn select" id="cam-select"></select>
+      <select class="video-btn select" id="mic-select"></select>
+    </div>
+
+    <!-- Chat -->
+    <div id="chat">
+      <ul id="messages"></ul>
+      <input type="text" id="message-input" placeholder="Écrire un message...">
+      <button id="send-btn">Envoyer</button>
+      <input type="text" id="description-input" placeholder="Votre description">
+      <button id="desc-btn">Valider description</button>
+    </div>
+
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>
